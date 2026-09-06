@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hon. Justus Mutemi | Youth Leader</title>
+<meta name="description" content="Hon. Justus Mutemi - Youth Leader. Share your ideas, connect and participate in building a better future.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--green:#075e54;--light-green:#0b8f7b;--gold:#f4b400;--dark:#102a2a;--light:#f4f8f7;--white:#fff;--gray:#667085}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);line-height:1.6;background:#fff}
+nav{position:fixed;width:100%;top:0;z-index:1000;background:rgba(255,255,255,.97);box-shadow:0 2px 15px rgba(0,0,0,.08)}
+.nav-container{max-width:1150px;margin:auto;padding:15px 25px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:bold;color:var(--green)}.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:25px;list-style:none}.nav-links a{text-decoration:none;color:var(--dark);font-weight:bold}.nav-links a:hover{color:var(--light-green)}
+.menu-btn{display:none;font-size:28px;cursor:pointer}
+.hero{min-height:100vh;padding:120px 25px 70px;background:linear-gradient(90deg,rgba(3,50,45,.95) 0%,rgba(3,50,45,.80) 45%,rgba(3,50,45,.30) 100%),url("images/justus-main.jpg");background-size:cover;background-position:center;color:#fff;display:flex;align-items:center}
+.hero-content{max-width:1150px;width:100%;margin:auto}.hero-text{max-width:650px}.hero-label{color:var(--gold);font-weight:bold;font-size:18px;letter-spacing:1px;margin-bottom:15px}.hero h1{font-size:clamp(45px,7vw,75px);line-height:1.05;margin-bottom:20px}.hero h1 span{color:var(--gold)}.hero p{font-size:20px;margin-bottom:30px}
+.buttons{display:flex;flex-wrap:wrap;gap:15px}.btn{padding:14px 25px;border-radius:7px;text-decoration:none;font-weight:bold;display:inline-block}.btn-primary{background:var(--gold);color:#222}.btn-outline{border:2px solid #fff;color:#fff}.btn-outline:hover{background:#fff;color:var(--green)}
+section{padding:90px 25px}.container{max-width:1100px;margin:auto}.section-title{text-align:center;margin-bottom:50px}.section-title h2{font-size:40px;color:var(--green);margin-bottom:10px}.section-title p{color:var(--gray);max-width:700px;margin:auto}
+.about{background:var(--light)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-image img{width:100%;height:430px;object-fit:cover;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.15)}.about-text h3{font-size:30px;color:var(--green);margin-bottom:15px}.about-text p{color:#475467;margin-bottom:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.card{padding:30px;border-radius:15px;background:#fff;box-shadow:0 7px 25px rgba(0,0,0,.08);transition:.3s}.card:hover{transform:translateY(-6px)}.card-icon{font-size:40px;margin-bottom:15px}.card h3{color:var(--green);margin-bottom:10px}.card p{color:var(--gray)}
+.gallery{background:var(--light)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.gallery-item{position:relative;height:260px;overflow:hidden;border-radius:12px;background:#ddd}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-item:hover img{transform:scale(1.08)}.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:15px;color:#fff;font-weight:bold;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.ideas{background:#fff}.idea-wrapper{max-width:800px;margin:auto;padding:40px;border-radius:15px;background:var(--light);box-shadow:0 10px 35px rgba(0,0,0,.08)}.form-group{margin-bottom:20px}.form-group label{display:block;margin-bottom:7px;font-weight:bold}input,textarea,select{width:100%;padding:14px;border:1px solid #d0d5dd;border-radius:7px;font-size:16px;font-family:inherit}textarea{min-height:160px;resize:vertical}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--light-green)}.submit-btn{width:100%;padding:15px;border:none;border-radius:7px;background:#25D366;color:#fff;font-size:17px;font-weight:bold;cursor:pointer}.submit-btn:hover{filter:brightness(.95)}
+.contact{background:var(--green);color:#fff}.contact .section-title h2{color:#fff}.contact .section-title p{color:rgba(255,255,255,.8)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-card{padding:30px;background:rgba(255,255,255,.1);border-radius:15px;text-align:center}.contact-card h3{margin-bottom:10px}.contact-card a{color:#fff;text-decoration:none}.whatsapp{display:inline-block;margin-top:15px;padding:12px 22px;background:#25D366;border-radius:7px;font-weight:bold}
+footer{background:#062f2b;color:#fff;text-align:center;padding:25px}
+@media(max-width:800px){.menu-btn{display:block}.nav-links{display:none;position:absolute;top:65px;left:0;width:100%;background:#fff;flex-direction:column;padding:25px}.nav-links.active{display:flex}.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.gallery-grid{grid-template-columns:1fr}.hero{text-align:center;background-position:65% center}.hero-text{margin:auto}.buttons{justify-content:center}.about-image img{height:350px}.idea-wrapper{padding:25px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-container"><div class="logo">Hon. Justus <span>Mutemi</span></div><div class="menu-btn" onclick="toggleMenu()">☰</div><ul class="nav-links" id="navLinks"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#campaign">Campaign</a></li><li><a href="#ideas">Share Your Idea</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<section class="hero" id="home"><div class="hero-content"><div class="hero-text"><div class="hero-label">YOUTH • LEADERSHIP • SERVICE</div><h1>Hon. Justus <span>Mutemi</span></h1><p>A youth leader committed to listening to the people, empowering young people and creating opportunities for a better future.</p><div class="buttons"><a href="#ideas" class="btn btn-primary">Share Your Idea</a><a href="#campaign" class="btn btn-outline">View Campaign</a></div></div></div></section>
+
+<section class="about" id="about"><div class="container"><div class="section-title"><h2>About Hon. Justus Mutemi</h2><p>Leadership built around listening, service, youth empowerment and community participation.</p></div><div class="about-grid"><div class="about-image"><img src="images/justus-main.jpg" alt="Hon. Justus Mutemi"></div><div class="about-text"><h3>A Voice for the Youth</h3><p>Hon. Justus Mutemi is a youth leader passionate about empowering young people and encouraging them to participate actively in their communities.</p><p>His leadership approach focuses on listening to people's concerns, supporting young people's ideas and working together to find practical solutions to community challenges.</p><p>This website provides an opportunity for members of the community to connect, share ideas and contribute to the leadership conversation.</p></div></div></div></section>
+
+<section id="leadership"><div class="container"><div class="section-title"><h2>Leadership Priorities</h2><p>Areas of focus for youth and community development.</p></div><div class="cards">
+<div class="card"><div class="card-icon">🎓</div><h3>Education</h3><p>Supporting education, skills development, mentorship and learning opportunities.</p></div>
+<div class="card"><div class="card-icon">💼</div><h3>Jobs & Enterprise</h3><p>Encouraging entrepreneurship, innovation and economic opportunities for young people.</p></div>
+<div class="card"><div class="card-icon">🤝</div><h3>Community</h3><p>Promoting unity, inclusion and community participation.</p></div>
+<div class="card"><div class="card-icon">💡</div><h3>Youth Ideas</h3><p>Giving young people a platform to share ideas and solutions.</p></div>
+<div class="card"><div class="card-icon">🌱</div><h3>Opportunity</h3><p>Supporting initiatives that help young people develop and succeed.</p></div>
+<div class="card"><div class="card-icon">🗣️</div><h3>Listening</h3><p>Making community voices part of leadership discussions and decision-making.</p></div>
+</div></div></section>
+
+<section class="gallery" id="campaign"><div class="container"><div class="section-title"><h2>Campaign & Community</h2><p>Moments from youth engagement, community activities and leadership initiatives.</p></div><div class="gallery-grid">
+<div class="gallery-item"><img src="images/campaign1.jpg" alt="Youth Engagement"><div class="gallery-caption">Youth Engagement</div></div>
+<div class="gallery-item"><img src="images/campaign2.jpg" alt="Meeting With Youth"><div class="gallery-caption">Meeting With Youth</div></div>
+<div class="gallery-item"><img src="images/image3.jpg" alt="Community Engagement"><div class="gallery-caption">Community Engagement</div></div>
+<div class="gallery-item"><img src="images/campaign4.jpg" alt="Leadership & Service"><div class="gallery-caption">Leadership & Service</div></div>
+<div class="gallery-item"><img src="images/campaign5.jpg" alt="Listening to the People"><div class="gallery-caption">Listening to the People</div></div>
+<div class="gallery-item"><img src="images/images6.jpg" alt="Together for the Future"><div class="gallery-caption">Together for the Future</div></div>
+</div></div></section>
+
+<section class="ideas" id="ideas"><div class="container"><div class="section-title"><h2>Share Your Idea</h2><p>Your voice matters. Share your ideas, concerns, recommendations or suggestions directly with Hon. Justus Mutemi through WhatsApp.</p></div><div class="idea-wrapper"><form id="ideaForm">
+<div class="form-group"><label for="name">Your Name</label><input type="text" id="name" placeholder="Enter your full name" required></div>
+<div class="form-group"><label for="phone">Your Phone Number</label><input type="tel" id="phone" placeholder="e.g. 0712 345 678" required></div>
+<div class="form-group"><label for="email">Your Email Address</label><input type="email" id="email" placeholder="e.g. you@example.com" required></div>
+<div class="form-group"><label for="category">What would you like to share?</label><select id="category" required><option value="">Select an option</option><option>Leadership Idea</option><option>Youth Opportunity</option><option>Community Development</option><option>Education</option><option>Employment / Business</option><option>General Feedback</option></select></div>
+<div class="form-group"><label for="message">Your Idea / Message</label><textarea id="message" placeholder="Write your idea, concern, recommendation or feedback..." required></textarea></div>
+<button type="submit" class="submit-btn">💬 Send My Idea via WhatsApp</button>
+<p style="text-align:center;margin-top:15px;color:#667085;font-size:14px">Your details and idea will be prepared in WhatsApp for you to send.</p>
+</form></div></div></section>
+
+<section class="contact" id="contact"><div class="container"><div class="section-title"><h2>Get In Touch</h2><p>Have an idea, question or message? Contact Hon. Justus Mutemi directly.</p></div><div class="contact-grid">
+<div class="contact-card"><h3>📧 Email</h3><p><a href="mailto:justusmutemi69@gmail.com">justusmutemi69@gmail.com</a></p></div>
+<div class="contact-card"><h3>📱 WhatsApp / Phone</h3><p><a href="tel:+254115884575">+254 115 884 575</a></p><a class="whatsapp" href="https://wa.me/254115884575" target="_blank" rel="noopener">💬 Chat on WhatsApp</a></div>
+</div></div></section>
+
+<footer><p>© <span id="year"></span> Hon. Justus Mutemi. All Rights Reserved. Designed by Dauglus Musyimi 😊</p><p>Youth • Leadership • Service • Community</p></footer>
+
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}
+document.querySelectorAll(".nav-links a").forEach(link=>link.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("active")));
+document.getElementById("year").textContent=new Date().getFullYear();
+
+document.getElementById("ideaForm").addEventListener("submit",function(event){
+event.preventDefault();
+const name=document.getElementById("name").value.trim();
+const phone=document.getElementById("phone").value.trim();
+const email=document.getElementById("email").value.trim();
+const category=document.getElementById("category").value;
+const message=document.getElementById("message").value.trim();
+const whatsappNumber="254115884575";
+const whatsappMessage=`Hello Hon. Justus Mutemi,
+
+I would like to share an idea/feedback about your leadership.
+
+PERSONAL DETAILS
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+MY SUBMISSION
+
+Category: ${category}
+
+Idea / Message:
+${message}
+
+Thank you for listening to the youth and the community.`;
+const whatsappURL="https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(whatsappMessage);
+window.open(whatsappURL,"_blank","noopener");
+});
+</script>
+</body>
+</html>
